@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:to_do/core/utls/app_strings.dart';
-import 'package:to_do/core/utls/text_styles.dart';
+import 'package:to_do/features/home/presentation/widget/head_text_widget.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -15,10 +14,7 @@ class HomeView extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    AppStrings.myTasks,
-                    style: CustomTextStyle.normalBoldstyleBold,
-                  ),
+                  HeadTextWidget(),
                 ],
               ),
             )
