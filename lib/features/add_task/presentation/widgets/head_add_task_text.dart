@@ -10,7 +10,7 @@ class HeadAddTaskText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30.0),
         child: Row(
           children: [
             const CustomDivider(
