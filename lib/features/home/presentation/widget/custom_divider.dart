@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do/core/utls/app_colors.dart';
 
 class CustomDivider extends StatelessWidget {
   const CustomDivider({super.key});
@@ -10,7 +11,7 @@ class CustomDivider extends StatelessWidget {
         height: 40,
         indent: 140,
         thickness: 2,
-        color: Color(0xffDDE6ED),
+        color: AppColors.kGreyColor,
       ),
     );
   }
