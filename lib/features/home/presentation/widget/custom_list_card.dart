@@ -26,37 +26,35 @@ class _CustomListCardItemState extends State<CustomListCardItem> {
               itemCount: test.length,
               itemBuilder: (context, index) {
                 return Dismissible(
-                    direction: DismissDirection.horizontal,
-                    // onDismissed: (_) {
-                    //   //! remove task from dataBase
-                    // },
-                    background: const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.delete_outline),
-                        Text('Delete this task')
-                      ],
-                    ),
-                    key: Key(
-                      index.toString(),
-                    ),
-                    child: const TaskCardItem());
+                  direction: DismissDirection.horizontal,
+                  // onDismissed: (_) {
+                  //! remove task from dataBase
+                  // },
+                  background: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.delete_outline),
+                      Text('Delete this task')
+                    ],
+                  ),
+                  key: Key(
+                    index.toString(),
+                  ),
+                  child: const TaskCardItem(),
+                );
               },
             )
           : Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
+                Lottie.asset(
+                  lottieUrl,
                   height: 200,
                   width: 200,
-                  child: Lottie.asset(
-                    lottieUrl,
-                    animate: test.isNotEmpty ? false : true,
-                  ),
+                  animate: test.isNotEmpty ? false : true,
                 ),
                 const Text(
-                  AppStrings.letsMakeItProductive,
-                )
+                  AppStrings.planYourDay,
+                ),
               ],
             ),
     );
