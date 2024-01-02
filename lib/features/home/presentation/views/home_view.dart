@@ -14,18 +14,18 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Scaffold widget for the overall screen structure
-    return const Scaffold(
+    return Scaffold(
       // Floating action button for adding new tasks
-      floatingActionButton: CustomFloatingActionButton(),
+      floatingActionButton: const CustomFloatingActionButton(),
       // SafeArea to ensure content is not obscured by device insets
       body: SafeArea(
         child: CustomScrollView(
           slivers: [
             // Empty space at the top of the screen
-            SliverToBoxAdapter(child: SizedBox(height: 20)),
+            const SliverToBoxAdapter(child: SizedBox(height: 20)),
 
             // Row for displaying a heading text in the center
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -35,15 +35,15 @@ class HomeView extends StatelessWidget {
             ),
 
             // Custom divider for separating sections
-            CustomDivider(),
+            const CustomDivider(),
 
             // Row for displaying task completion indicators
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: TaskIndicatorRow(),
             ),
 
             // Empty space between sections
-            SliverToBoxAdapter(child: SizedBox(height: 20)),
+            const SliverToBoxAdapter(child: SizedBox(height: 20)),
 
             // Custom card for displaying a list of tasks
             SliverToBoxAdapter(

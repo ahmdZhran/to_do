@@ -1,22 +1,64 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+import 'package:to_do/core/utls/app_strings.dart';
+import 'package:to_do/core/utls/assets.dart';
 import 'package:to_do/features/home/presentation/widget/task_card.dart';
 
-class CustomListCardItem extends StatelessWidget {
+class CustomListCardItem extends StatefulWidget {
   const CustomListCardItem({
     super.key,
   });
+
+  @override
+  State<CustomListCardItem> createState() => _CustomListCardItemState();
+}
+
+class _CustomListCardItemState extends State<CustomListCardItem> {
+  List<int> test = [];
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       height: 720,
-      child: ListView.builder(
-        itemCount: 20,
-        itemBuilder: (context, index) {
-          return const TaskCardItem();
-        },
-      ),
+      child: test.isNotEmpty
+          ? ListView.builder(
+              itemCount: test.length,
+              itemBuilder: (context, index) {
+                return Dismissible(
+                    direction: DismissDirection.horizontal,
+                    // onDismissed: (_) {
+                    //   //! remove task from dataBase
+                    // },
+                    background: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.delete_outline),
+                        Text('Delete this task')
+                      ],
+                    ),
+                    key: Key(
+                      index.toString(),
+                    ),
+                    child: const TaskCardItem());
+              },
+            )
+          : Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 200,
+                  width: 200,
+                  child: Lottie.asset(
+                    lottieUrl,
+                    animate: test.isNotEmpty ? false : true,
+                  ),
+                ),
+                const Text(
+                  AppStrings.letsMakeItProductive,
+                )
+              ],
+            ),
     );
   }
 }
