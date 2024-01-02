@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 abstract class CustomTextStyle {
-  static const soraBoldstyleBold = TextStyle(
-    fontSize: 24,
+  static const normalBoldstyleBold = TextStyle(
+    fontSize: 30,
     fontWeight: FontWeight.bold,
   );
 }
