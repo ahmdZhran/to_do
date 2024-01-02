@@ -13,7 +13,7 @@ class AddTaskView extends StatelessWidget {
           children: [
             SizedBox(height: 25),
             BackToHomeView(),
-            HeadAddTaskVeiwText(),
+            HeadAddTaskText(),
           ],
         ),
       ),

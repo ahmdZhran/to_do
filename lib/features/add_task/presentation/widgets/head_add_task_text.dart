@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:to_do/core/utls/app_colors.dart';
 import 'package:to_do/core/utls/app_strings.dart';
 import 'package:to_do/core/utls/text_styles.dart';
+import 'package:to_do/features/add_task/presentation/widgets/custom_divider1.dart';
 
-class HeadAddTaskVeiwText extends StatelessWidget {
-  const HeadAddTaskVeiwText({super.key});
+class HeadAddTaskText extends StatelessWidget {
+  const HeadAddTaskText({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
+      child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Row(
           children: [
-            const Expanded(
-              child: Divider(
-                color: AppColors.kGreyColor,
-                thickness: 4,
-              ),
+            const CustomDivider(
+              thickness: 4,
             ),
             const SizedBox(width: 8.0),
             Text(
@@ -26,12 +23,7 @@ class HeadAddTaskVeiwText extends StatelessWidget {
                   .copyWith(fontWeight: FontWeight.normal),
             ),
             const SizedBox(width: 8.0),
-            const Expanded(
-              child: Divider(
-                color: AppColors.kGreyColor,
-                thickness: 4,
-              ),
-            ),
+            const CustomDivider(thickness: 4),
           ],
         ),
       ),
