@@ -1,6 +1,6 @@
 // Importing necessary packages and custom widgets
 import 'package:flutter/material.dart';
-import 'package:to_do/core/widgets/custom_divider.dart';
+import 'package:to_do/features/add_task/presentation/widgets/custom_divider.dart';
 import 'package:to_do/features/home/presentation/widget/custom_floating_action_button.dart';
 import 'package:to_do/features/home/presentation/widget/custom_list_card.dart';
 import 'package:to_do/features/home/presentation/widget/head_text_widget.dart';
@@ -40,7 +40,7 @@ class _HomeViewState extends State<HomeView> {
             ),
 
             // Custom divider for separating sections
-            CustomDivider(height: 40, indent: 140, thickness: 2),
+            CustomDivider(),
 
             // Row for displaying task completion indicators
             SliverToBoxAdapter(

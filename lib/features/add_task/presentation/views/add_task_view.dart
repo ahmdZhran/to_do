@@ -9,17 +9,11 @@ class AddTaskView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
-        body: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: SizedBox(height: 25),
-            ),
-            SliverToBoxAdapter(
-              child: BackToHomeView(),
-            ),
-            SliverToBoxAdapter(
-              child: HeadAddTaskVeiwText(),
-            ),
+        body: Column(
+          children: [
+            SizedBox(height: 25),
+            BackToHomeView(),
+            HeadAddTaskVeiwText(),
           ],
         ),
       ),
