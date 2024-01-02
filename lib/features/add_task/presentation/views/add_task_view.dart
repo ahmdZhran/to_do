@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:to_do/core/utls/assets.dart';
 import 'package:to_do/features/add_task/presentation/widgets/back_to_home_view.dart';
 import 'package:to_do/features/add_task/presentation/widgets/head_add_task_text.dart';
 
