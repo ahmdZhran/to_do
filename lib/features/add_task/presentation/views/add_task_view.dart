@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:to_do/features/add_task/presentation/widgets/back_to_home_view.dart';
+import 'package:to_do/features/add_task/presentation/widgets/custom_divider1.dart';
 import 'package:to_do/features/add_task/presentation/widgets/head_add_task_text.dart';
 import 'package:to_do/features/add_task/presentation/widgets/sub_text.dart';
 
@@ -18,6 +19,9 @@ class AddTaskView extends StatelessWidget {
             SizedBox(height: 40),
             HeadAddTaskText(),
             SubTextHead(),
+            CustomDivider(
+              thickness: 5,
+            ),
           ],
         ),
       ),

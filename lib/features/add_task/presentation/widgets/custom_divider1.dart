@@ -15,6 +15,8 @@ class CustomDivider extends StatelessWidget {
       child: Divider(
         color: AppColors.kGreyColor,
         thickness: 4,
+        endIndent: 30,
+        indent: 30,
       ),
     );
   }
