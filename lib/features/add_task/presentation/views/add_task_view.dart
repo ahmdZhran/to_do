@@ -6,14 +6,20 @@ class AddTaskView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Scaffold(
         body: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: SizedBox(height: 25),
             ),
             SliverToBoxAdapter(
+              child: IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.arrow_back),
+              ),
+            ),
+            const SliverToBoxAdapter(
               child: HeadAddTaskVeiwText(),
             ),
           ],
