@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-import 'package:to_do/core/utls/app_strings.dart';
-import 'package:to_do/core/utls/assets.dart';
+import 'package:to_do/features/home/presentation/widget/show_lottie.dart';
 import 'package:to_do/features/home/presentation/widget/task_card.dart';
 
 class CustomListCardItem extends StatefulWidget {
@@ -14,7 +12,7 @@ class CustomListCardItem extends StatefulWidget {
 }
 
 class _CustomListCardItemState extends State<CustomListCardItem> {
-  List<int> test = [];
+  List<int> test = [1, 2, 3];
 
   @override
   Widget build(BuildContext context) {
@@ -44,19 +42,7 @@ class _CustomListCardItemState extends State<CustomListCardItem> {
                 );
               },
             )
-          : Column(
-              children: [
-                Lottie.asset(
-                  lottieUrl,
-                  height: 200,
-                  width: 200,
-                  animate: test.isNotEmpty ? false : true,
-                ),
-                const Text(
-                  AppStrings.planYourDay,
-                ),
-              ],
-            ),
+          : ShowLottieFileWidget(test: test),
     );
   }
 }
