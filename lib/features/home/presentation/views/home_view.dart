@@ -7,10 +7,15 @@ import 'package:to_do/features/home/presentation/widget/head_text_widget.dart';
 import 'package:to_do/features/home/presentation/widget/task_indicator_row.dart';
 
 // Defining the HomeView class, extending StatelessWidget
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   // Constructor for the HomeView class
   const HomeView({super.key});
 
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     // Scaffold widget for the overall screen structure

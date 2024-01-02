@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do/core/utls/app_router.dart';
 import 'package:to_do/core/utls/app_strings.dart';
 import 'package:to_do/features/home/presentation/views/home_view.dart';
 
@@ -7,6 +8,7 @@ class ToDo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      onGenerateRoute: AppRouter.generateRoute,
       debugShowCheckedModeBanner: false,
       title: AppStrings.appName,
       theme: ThemeData(
