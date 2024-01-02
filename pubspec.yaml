@@ -64,8 +64,8 @@ flutter:
   fonts:
     - family: Kanit
       fonts:
-        - asset: assets/fonts/
-  #       - asset: fonts/Schyler-Italic.ttf
+        - asset: assets/fonts/Kanit-ExtraLight.ttf
+        - asset: assets/fonts/Kanit-Regular.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
