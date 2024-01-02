@@ -19,7 +19,7 @@ class AddTaskView extends StatelessWidget {
             SizedBox(height: 40),
             HeadAddTaskText(),
             SubTextHead(),
-            SizedBox(height: 200),
+            SizedBox(height: 100),
             CustomTextFomField(
               lableText: 'add you task',
             )

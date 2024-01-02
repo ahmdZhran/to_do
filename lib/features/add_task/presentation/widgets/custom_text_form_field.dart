@@ -21,7 +21,7 @@ class CustomTextFomField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: TextFormField(
-        cursorColor: AppColors.kBlackColor,
+        cursorColor: AppColors.knavyColor,
         obscureText: obscureText,
         keyboardType: keyboardType,
         validator: (value) {
