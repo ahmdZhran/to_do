@@ -13,10 +13,11 @@ class AddTaskView extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 25),
+            SizedBox(height: 40),
             BackToHomeView(),
+            SizedBox(height: 40),
             HeadAddTaskText(),
-            SubTextHead()
+            SubTextHead(),
           ],
         ),
       ),
