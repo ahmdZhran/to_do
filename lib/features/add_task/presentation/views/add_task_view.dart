@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:to_do/features/add_task/presentation/widgets/back_to_home_view.dart';
 import 'package:to_do/features/add_task/presentation/widgets/head_add_task_text.dart';
+import 'package:to_do/features/add_task/presentation/widgets/sub_text.dart';
 
 class AddTaskView extends StatelessWidget {
   const AddTaskView({super.key});
@@ -10,10 +11,12 @@ class AddTaskView extends StatelessWidget {
     return const SafeArea(
       child: Scaffold(
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 25),
             BackToHomeView(),
             HeadAddTaskText(),
+            SubTextHead()
           ],
         ),
       ),
