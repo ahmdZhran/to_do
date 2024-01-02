@@ -17,7 +17,7 @@ class ShowLottieFileWidget extends StatelessWidget {
       children: [
         const SizedBox(height: 70),
         Lottie.asset(
-          lottieUrl,
+          AppAssets.lottieFilePath,
           height: 200,
           width: 200,
           animate: test.isNotEmpty ? false : true,

@@ -13,7 +13,7 @@ class CustomListCardItem extends StatefulWidget {
 
 class _CustomListCardItemState extends State<CustomListCardItem> {
   // Sample data for testing
-  List<int> test = [1, 2, 3];
+  List<int> test = [];
 
   @override
   Widget build(BuildContext context) {
