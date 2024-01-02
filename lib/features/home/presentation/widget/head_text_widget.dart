@@ -11,7 +11,7 @@ class HeadTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Text(
       AppStrings.myTasks,
-      style: CustomTextStyle.normalBoldstyleBold,
+      style: CustomTextStyle.regularBoldstyleBold,
     );
   }
 }

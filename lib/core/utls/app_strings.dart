@@ -5,7 +5,7 @@ abstract class AppStrings {
       planYourDay = 'Plan your day, pave your way.',
       //String for Add task view
       addNewTask = 'Add New Task',
-      whatAreYouPlaying = 'What are you planing',
+      whatAreYouPlaying = 'What are you planing😇?',
       addNote = 'Add Note',
       time = 'Time',
       date = 'Date',
