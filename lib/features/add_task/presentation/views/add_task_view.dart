@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:to_do/core/utls/assets.dart';
 import 'package:to_do/features/add_task/presentation/widgets/head_add_task_text.dart';
 
 class AddTaskView extends StatelessWidget {
@@ -15,9 +17,11 @@ class AddTaskView extends StatelessWidget {
             ),
             SliverToBoxAdapter(
               child: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.arrow_back),
-              ),
+                  onPressed: () {},
+                  icon: IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(AppAssets.customArrowIcon),
+                  )),
             ),
             const SliverToBoxAdapter(
               child: HeadAddTaskVeiwText(),
