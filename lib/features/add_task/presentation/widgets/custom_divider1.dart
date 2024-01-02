@@ -11,12 +11,13 @@ class CustomDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
+    return const SizedBox(
+      height: 20,
       child: Divider(
         color: AppColors.kGreyColor,
         thickness: 4,
-        endIndent: 30,
-        indent: 30,
+        endIndent: 20,
+        indent: 20,
       ),
     );
   }
