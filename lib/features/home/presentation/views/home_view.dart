@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:to_do/features/home/presentation/widget/custom_divider.dart';
 import 'package:to_do/features/home/presentation/widget/custom_floating_action_button.dart';
 import 'package:to_do/features/home/presentation/widget/head_text_widget.dart';
+import 'package:to_do/features/home/presentation/widget/task_indicator_row.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -23,6 +24,9 @@ class HomeView extends StatelessWidget {
               ),
             ),
             CustomDivider(),
+            SliverToBoxAdapter(
+              child: TaskIndicatorRow(),
+            )
           ],
         ),
       ),
