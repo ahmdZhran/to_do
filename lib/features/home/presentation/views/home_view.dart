@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:to_do/core/utls/app_colors.dart';
 import 'package:to_do/features/home/presentation/widget/custom_divider.dart';
 import 'package:to_do/features/home/presentation/widget/custom_floating_action_button.dart';
-import 'package:to_do/features/home/presentation/widget/custom_list_tile.dart';
+import 'package:to_do/features/home/presentation/widget/custom_list_card.dart';
 import 'package:to_do/features/home/presentation/widget/head_text_widget.dart';
-import 'package:to_do/features/home/presentation/widget/task_card.dart';
 import 'package:to_do/features/home/presentation/widget/task_indicator_row.dart';
 
 class HomeView extends StatelessWidget {
@@ -12,13 +10,13 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: const CustomFloatingActionButton(),
+    return const Scaffold(
+      floatingActionButton: CustomFloatingActionButton(),
       body: SafeArea(
         child: CustomScrollView(
           slivers: [
-            const SliverToBoxAdapter(child: SizedBox(height: 20)),
-            const SliverToBoxAdapter(
+            SliverToBoxAdapter(child: SizedBox(height: 20)),
+            SliverToBoxAdapter(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -26,22 +24,13 @@ class HomeView extends StatelessWidget {
                 ],
               ),
             ),
-            const CustomDivider(),
-            const SliverToBoxAdapter(
+            CustomDivider(),
+            SliverToBoxAdapter(
               child: TaskIndicatorRow(),
             ),
-            const SliverToBoxAdapter(child: SizedBox(height: 20)),
+            SliverToBoxAdapter(child: SizedBox(height: 20)),
             SliverToBoxAdapter(
-              child: SizedBox(
-                width: double.infinity,
-                height: 720,
-                child: ListView.builder(
-                  itemCount: 20,
-                  itemBuilder: (context, index) {
-                    return const TaskCardItem();
-                  },
-                ),
-              ),
+              child: CustomListCardItem(),
             )
           ],
         ),
