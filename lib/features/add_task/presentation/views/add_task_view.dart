@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:to_do/core/utls/app_strings.dart';
-import 'package:to_do/core/utls/text_styles.dart';
+import 'package:to_do/features/add_task/presentation/widgets/head_add_task_text.dart';
 
 class AddTaskView extends StatelessWidget {
   const AddTaskView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
         body: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(
-              child: Text(
-                AppStrings.addNewTask,
-                style: CustomTextStyle.kanitExtraLight
-                    .copyWith(fontWeight: FontWeight.normal),
-              ),
+              child: SizedBox(height: 25),
+            ),
+            SliverToBoxAdapter(
+              child: HeadAddTaskVeiwText(),
             ),
           ],
         ),

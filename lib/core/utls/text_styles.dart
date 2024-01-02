@@ -7,7 +7,7 @@ abstract class CustomTextStyle {
     fontFamily: 'Kanit',
   );
   static const kanitExtraLight = TextStyle(
-    fontSize: 30,
+    fontSize: 35,
     fontFamily: 'Kanit-ExtraLight',
   );
 }
