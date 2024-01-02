@@ -9,7 +9,9 @@ class CustomFloatingActionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, '/addTaskView');
+      },
       backgroundColor: AppColors.knavyColor,
       child: const Icon(
         Icons.add,
