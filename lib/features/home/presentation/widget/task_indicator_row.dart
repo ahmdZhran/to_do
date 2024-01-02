@@ -8,7 +8,7 @@ class TaskIndicatorRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(left: 8.0),
+      padding: EdgeInsets.only(left: 8.0, top: 20),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
