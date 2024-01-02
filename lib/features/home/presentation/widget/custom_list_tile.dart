@@ -14,23 +14,44 @@ class CustomListTile extends StatelessWidget {
         //check on task
       },
       child: ListTile(
-        leading: AnimatedContainer(
-          duration: const Duration(milliseconds: 600),
-          decoration: BoxDecoration(
-            color: AppColors.knavyColor,
-            shape: BoxShape.circle,
-            border: Border.all(
-              width: 8,
+          leading: AnimatedContainer(
+            duration: const Duration(milliseconds: 600),
+            decoration: BoxDecoration(
+              color: AppColors.knavyColor,
+              shape: BoxShape.circle,
+              border: Border.all(
+                width: 8,
+                color: AppColors.kGreyColor,
+              ),
+            ),
+            child: const Icon(
+              Icons.check,
+              size: 25,
               color: AppColors.kGreyColor,
             ),
           ),
-          child: const Icon(
-            Icons.check,
-            size: 25,
-            color: AppColors.kGreyColor,
+          title: const Text(
+            'Done',
+            style: TextStyle(fontWeight: FontWeight.bold),
           ),
-        ),
-      ),
+          subtitle: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Description'),
+              Align(
+                alignment: Alignment.topRight,
+                child: Text(
+                  'date',
+                ),
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: Text(
+                  'subDate',
+                ),
+              ),
+            ],
+          )),
     );
   }
 }

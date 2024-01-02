@@ -4,6 +4,7 @@ import 'package:to_do/features/home/presentation/widget/custom_divider.dart';
 import 'package:to_do/features/home/presentation/widget/custom_floating_action_button.dart';
 import 'package:to_do/features/home/presentation/widget/custom_list_tile.dart';
 import 'package:to_do/features/home/presentation/widget/head_text_widget.dart';
+import 'package:to_do/features/home/presentation/widget/task_card.dart';
 import 'package:to_do/features/home/presentation/widget/task_indicator_row.dart';
 
 class HomeView extends StatelessWidget {
@@ -37,15 +38,7 @@ class HomeView extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: 20,
                   itemBuilder: (context, index) {
-                    return AnimatedContainer(
-                      margin: const EdgeInsets.symmetric(
-                          vertical: 8.0, horizontal: 16),
-                      decoration: BoxDecoration(
-                          color: AppColors.kGreyColor,
-                          borderRadius: BorderRadius.circular(12)),
-                      duration: const Duration(milliseconds: 600),
-                      child: const CustomListTile(),
-                    );
+                    return const TaskCardItem();
                   },
                 ),
               ),
