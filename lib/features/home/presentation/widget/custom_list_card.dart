@@ -12,6 +12,7 @@ class CustomListCardItem extends StatefulWidget {
 }
 
 class _CustomListCardItemState extends State<CustomListCardItem> {
+  // Sample data for testing
   List<int> test = [1, 2, 3];
 
   @override
@@ -25,8 +26,9 @@ class _CustomListCardItemState extends State<CustomListCardItem> {
               itemBuilder: (context, index) {
                 return Dismissible(
                   direction: DismissDirection.horizontal,
+
                   // onDismissed: (_) {
-                  //! remove task from dataBase
+                  //   //! remove task from database
                   // },
                   background: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -38,10 +40,12 @@ class _CustomListCardItemState extends State<CustomListCardItem> {
                   key: Key(
                     index.toString(),
                   ),
+                  // Task card item widget
                   child: const TaskCardItem(),
                 );
               },
             )
+          // Display Lottie animation if the list is empty, list is empty
           : ShowLottieFileWidget(test: test),
     );
   }
