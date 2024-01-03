@@ -4,7 +4,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:to_do/core/utls/app_strings.dart';
 import 'package:to_do/features/add_task/data/models/task_model.dart';
 
-part 'add_task_state.dart';
+part '../add_task_cubit/add_task_state.dart';
 
 class AddTaskCubit extends Cubit<AddTaskState> {
   AddTaskCubit() : super(AddTaskInitial());

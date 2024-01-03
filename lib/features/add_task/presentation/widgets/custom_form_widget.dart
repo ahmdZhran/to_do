@@ -4,7 +4,7 @@ import 'package:to_do/core/utls/app_strings.dart';
 import 'package:to_do/features/add_task/data/models/task_model.dart';
 import 'package:to_do/features/add_task/presentation/widgets/custom_button.dart';
 import 'package:to_do/features/add_task/presentation/widgets/custom_text_form_field.dart';
-import '../view_model/cubit/add_task_cubit/add_task_cubit.dart';
+import '../view_model/cubit/task_cubit/add_task_cubit.dart';
 
 class CustomFormWidget extends StatelessWidget {
   const CustomFormWidget({super.key});
