@@ -20,7 +20,7 @@ class AddTaskCubit extends Cubit<AddTaskState> {
       await notesBox.add(note);
       emit(AddTaskSuccess());
     } catch (e) {
-      AddTaskFailer(e.toString());
+      emit(AddTaskFailer(e.toString()));
     }
   }
 }
