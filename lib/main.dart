@@ -8,7 +8,7 @@ void main() async {
   // Initializing Hive for Flutter
   await Hive.initFlutter();
   // Opening the Hive box for storing notes with the specified name
-  await Hive.openBox(AppStrings.notesBoxName);
+  await Hive.openBox(AppStrings.taskesBoxName);
   // Registering the Hive adapter for the TaskModel
   Hive.registerAdapter(TaskModelAdapter());
   runApp(const ToDo());

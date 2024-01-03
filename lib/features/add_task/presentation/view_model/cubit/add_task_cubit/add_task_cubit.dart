@@ -19,7 +19,7 @@ class AddTaskCubit extends Cubit<AddTaskState> {
     // Asynchronous method to add a new task (note) to the Hive box
     try {
       // Accessing the Hive box for storing TaskModel objects
-      var notesBox = Hive.box<TaskModel>(AppStrings.notesBoxName);
+      var notesBox = Hive.box<TaskModel>(AppStrings.taskesBoxName);
 
       // Adding the provided task (note) to the Hive box
       await notesBox.add(note);

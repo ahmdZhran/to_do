@@ -12,5 +12,5 @@ abstract class AppStrings {
       addTask = 'Add Task',
       deleteTask = 'Delete Task',
       //nave of hive box
-      notesBoxName = 'noteBox';
+      taskesBoxName = 'noteBox';
 }

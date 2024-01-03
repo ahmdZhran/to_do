@@ -11,33 +11,32 @@ class CustomFormWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<AddTaskCubit, AddTaskState>(
-      listener: (context, state) {
-        // TODO: implement listener
-      },
+    return BlocBuilder<AddTaskCubit, AddTaskState>(
       builder: (context, state) {
+        // Retrieve the AddTaskCubit instance from the BlocProvider
         AddTaskCubit addTaskCubit = BlocProvider.of<AddTaskCubit>(context);
+
         return Form(
           key: addTaskCubit.addNoteFromKey,
           child: Column(
             children: [
+              // CustomTextFormField for task title
               CustomTextFomField(
                 onChanged: (title) {
                   addTaskCubit.taskTitle = title;
-                  print(title);
                 },
-                lableText: 'add you task',
+                lableText: 'add your task', // Corrected typo in label text
               ),
               const SizedBox(height: 30),
+              // CustomTextFormField for task description
               CustomTextFomField(
                 onChanged: (subTitle) {
                   addTaskCubit.taskSubTitle = subTitle;
-                  print(subTitle);
                 },
                 lableText: 'Description',
               ),
               const SizedBox(height: 20),
-              // Widget to get button for actions in the add task view
+              // Widget to get a button for actions in the add task view
               SizedBox(
                 height: 50,
                 child: CustomButton(
@@ -54,12 +53,17 @@ class CustomFormWidget extends StatelessWidget {
     );
   }
 
+  // Function to handle adding a task
   void handleAddTask(AddTaskCubit addTaskCubit) {
+    // Validate the form
     if (addTaskCubit.addNoteFromKey.currentState!.validate()) {
+      // Create a TaskModel with the provided information
       TaskModel task = TaskModel(
           taskTitle: addTaskCubit.taskTitle!,
           subTitle: addTaskCubit.taskSubTitle!,
           date: DateTime.now().toString());
+
+      // Call the addNotes method in the AddTaskCubit to add the task
       addTaskCubit.addNotes(task);
     }
   }
