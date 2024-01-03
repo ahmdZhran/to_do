@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:to_do/core/utls/app_strings.dart';
+import 'package:to_do/features/add_task/data/models/task_model.dart';
 import 'package:to_do/features/add_task/presentation/widgets/custom_button.dart';
 import 'package:to_do/features/add_task/presentation/widgets/custom_text_form_field.dart';
 import '../view_model/cubit/add_task_cubit/add_task_cubit.dart';
@@ -20,11 +21,19 @@ class CustomFormWidget extends StatelessWidget {
           key: addTaskCubit.addNoteFromKey,
           child: Column(
             children: [
-              const CustomTextFomField(
+              CustomTextFomField(
+                onChanged: (title) {
+                  addTaskCubit.taskTitle = title;
+                  print(title);
+                },
                 lableText: 'add you task',
               ),
               const SizedBox(height: 30),
-              const CustomTextFomField(
+              CustomTextFomField(
+                onChanged: (subTitle) {
+                  addTaskCubit.taskSubTitle = subTitle;
+                  print(subTitle);
+                },
                 lableText: 'Description',
               ),
               const SizedBox(height: 20),
@@ -33,7 +42,7 @@ class CustomFormWidget extends StatelessWidget {
                 height: 50,
                 child: CustomButton(
                   onPressed: () {
-                    if (addTaskCubit.addNoteFromKey.currentState!.validate()) {}
+                    handleAddTask(addTaskCubit);
                   },
                   text: const Text(AppStrings.addTask),
                 ),
@@ -43,5 +52,15 @@ class CustomFormWidget extends StatelessWidget {
         );
       },
     );
+  }
+
+  void handleAddTask(AddTaskCubit addTaskCubit) {
+    if (addTaskCubit.addNoteFromKey.currentState!.validate()) {
+      TaskModel task = TaskModel(
+          taskTitle: addTaskCubit.taskTitle!,
+          subTitle: addTaskCubit.taskSubTitle!,
+          date: DateTime.now().toString());
+      addTaskCubit.addNotes(task);
+    }
   }
 }

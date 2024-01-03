@@ -9,6 +9,11 @@ part 'add_task_state.dart';
 class AddTaskCubit extends Cubit<AddTaskState> {
   AddTaskCubit() : super(AddTaskInitial());
   GlobalKey<FormState> addNoteFromKey = GlobalKey();
+
+  String? taskTitle;
+  String? taskSubTitle;
+  String? date;
+
   addNotes(TaskModel note) async {
     emit(AddTaskLoading());
     // Asynchronous method to add a new task (note) to the Hive box
