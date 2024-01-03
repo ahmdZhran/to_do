@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         child: DefaultTextStyle(
           style: const TextStyle(
-              color: AppColors.kBlackColor), // Set text color to black
+              color: AppColors.kGreyColor), // Set text color to black
           child: text,
         ),
       ),
