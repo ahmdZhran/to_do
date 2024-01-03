@@ -15,8 +15,9 @@ class CustomFormWidget extends StatelessWidget {
         // TODO: implement listener
       },
       builder: (context, state) {
+        AddTaskCubit addTaskCubit = BlocProvider.of<AddTaskCubit>(context);
         return Form(
-          key: BlocProvider.of<AddTaskCubit>(context).addNoteFromKey,
+          key: addTaskCubit.addNoteFromKey,
           child: Column(
             children: [
               const CustomTextFomField(
@@ -28,9 +29,14 @@ class CustomFormWidget extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               // Widget to get button for actions in the add task view
-              CustomButton(
-                onPressed: () {},
-                text: const Text(AppStrings.addTask),
+              SizedBox(
+                height: 50,
+                child: CustomButton(
+                  onPressed: () {
+                    if (addTaskCubit.addNoteFromKey.currentState!.validate()) {}
+                  },
+                  text: const Text(AppStrings.addTask),
+                ),
               ),
             ],
           ),

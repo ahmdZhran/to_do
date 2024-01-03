@@ -11,21 +11,23 @@ class AddTaskView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(height: 40),
-            // Widget to navigate back to the home view
-            BackToHomeView(),
-            SizedBox(height: 40),
-            // Widget for the heading of the add task view
-            HeadAddTaskText(),
-            SizedBox(height: 100),
-            // Widget for the subheading of the add task view
-            SubTextHead(),
-            // Widget for the custom form to input task details
-            CustomFormWidget(),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 40),
+              // Widget to navigate back to the home view
+              BackToHomeView(),
+              SizedBox(height: 40),
+              // Widget for the heading of the add task view
+              HeadAddTaskText(),
+              SizedBox(height: 100),
+              // Widget for the subheading of the add task view
+              SubTextHead(),
+              // Widget for the custom form to input task details
+              CustomFormWidget(),
+            ],
+          ),
         ),
       ),
     );

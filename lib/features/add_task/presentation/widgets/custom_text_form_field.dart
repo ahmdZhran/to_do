@@ -10,12 +10,14 @@ class CustomTextFomField extends StatelessWidget {
     this.keyboardType,
     this.suffix,
     this.obscureText = false,
+    this.onFieldSubmitted,
   });
   final String lableText;
   final void Function(String)? onChanged;
   final TextInputType? keyboardType;
   final Widget? suffix;
   final bool obscureText;
+  final void Function(String)? onFieldSubmitted;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -32,6 +34,7 @@ class CustomTextFomField extends StatelessWidget {
           }
         },
         onChanged: onChanged,
+        onFieldSubmitted: onFieldSubmitted,
         decoration: InputDecoration(
           suffix: suffix,
           filled: true,
