@@ -13,7 +13,7 @@ class CustomListCardItem extends StatefulWidget {
 
 class _CustomListCardItemState extends State<CustomListCardItem> {
   // Sample data for testing
-  List<int> test = [];
+  List<int> test = [1, 2, 3];
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class _CustomListCardItemState extends State<CustomListCardItem> {
                   direction: DismissDirection.horizontal,
 
                   // onDismissed: (_) {
-                  //   //! remove task from database
+                  //! remove task from database
                   // },
                   background: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
