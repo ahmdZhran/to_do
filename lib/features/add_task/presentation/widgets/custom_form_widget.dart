@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:to_do/core/utls/app_strings.dart';
+import 'package:to_do/features/add_task/presentation/widgets/custom_button.dart';
 import 'package:to_do/features/add_task/presentation/widgets/custom_text_form_field.dart';
-import 'package:to_do/features/add_task/presentation/widgets/get_buttons.dart';
-
 import '../view_model/cubit/add_task_cubit/add_task_cubit.dart';
 
 class CustomFormWidget extends StatelessWidget {
@@ -15,19 +15,23 @@ class CustomFormWidget extends StatelessWidget {
         // TODO: implement listener
       },
       builder: (context, state) {
-        return const Form(
+        return Form(
+          key: BlocProvider.of<AddTaskCubit>(context).addNoteFromKey,
           child: Column(
             children: [
-              CustomTextFomField(
+              const CustomTextFomField(
                 lableText: 'add you task',
               ),
-              SizedBox(height: 30),
-              CustomTextFomField(
+              const SizedBox(height: 30),
+              const CustomTextFomField(
                 lableText: 'Description',
               ),
-              SizedBox(height: 20),
-              // Widget to get buttons for actions in the add task view
-              GetButtons(),
+              const SizedBox(height: 20),
+              // Widget to get button for actions in the add task view
+              CustomButton(
+                onPressed: () {},
+                text: const Text(AppStrings.addTask),
+              ),
             ],
           ),
         );

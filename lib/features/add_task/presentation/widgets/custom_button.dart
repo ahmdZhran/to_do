@@ -4,13 +4,11 @@ import 'package:to_do/core/utls/app_colors.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
-    this.color,
     required this.onPressed,
     required this.text,
     this.onTap,
   });
 
-  final Color? color;
   final VoidCallback onPressed;
   final Text text;
   final VoidCallback? onTap;
@@ -21,7 +19,7 @@ class CustomButton extends StatelessWidget {
       onTap: onTap,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: color,
+          backgroundColor: AppColors.knavyColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
