@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:to_do/features/home/presentation/widget/show_lottie.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:to_do/core/utls/app_strings.dart';
+import 'package:to_do/features/add_task/data/models/task_model.dart';
+import 'package:to_do/features/home/presentation/view_model/task_cubit/task_cubit.dart';
+
 import 'package:to_do/features/home/presentation/widget/task_card.dart';
 
 class CustomListCardItem extends StatefulWidget {
@@ -12,29 +16,30 @@ class CustomListCardItem extends StatefulWidget {
 }
 
 class _CustomListCardItemState extends State<CustomListCardItem> {
-  // Sample data for testing
-  List<int> test = [1, 2, 3];
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 720,
-      child: test.isNotEmpty
-          ? ListView.builder(
-              itemCount: test.length,
+        width: double.infinity,
+        height: 720,
+        child: BlocBuilder<TaskCubit, TaskState>(
+          builder: (context, state) {
+            List<TaskModel> tasks =
+                BlocProvider.of<TaskCubit>(context).tasks ?? [];
+            return ListView.builder(
+              itemCount: tasks.length,
               itemBuilder: (context, index) {
                 return Dismissible(
                   direction: DismissDirection.horizontal,
 
                   // onDismissed: (_) {
-                  //! remove task from database
+                  //TODO
+                  // remove task from database
                   // },
                   background: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.delete_outline),
-                      Text('Delete this task')
+                      Text(AppStrings.deleteThisTask)
                     ],
                   ),
                   key: Key(
@@ -44,9 +49,11 @@ class _CustomListCardItemState extends State<CustomListCardItem> {
                   child: const TaskCardItem(),
                 );
               },
-            )
-          // Display Lottie animation if the list is empty, list is empty
-          : ShowLottieFileWidget(test: test),
-    );
+            );
+          },
+        )
+        // Display Lottie animation if the list is empty, list is empty
+        // : ShowLottieFileWidget(test: test),
+        );
   }
 }

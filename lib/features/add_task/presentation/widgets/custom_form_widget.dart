@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:to_do/core/cubit/add_task_cubit/add_task_cubit.dart';
 import 'package:to_do/core/utls/app_strings.dart';
 import 'package:to_do/features/add_task/data/models/task_model.dart';
+import 'package:to_do/features/add_task/presentation/view_model/add_task_cubit/add_task_cubit.dart';
 import 'package:to_do/features/add_task/presentation/widgets/custom_button.dart';
 import 'package:to_do/features/add_task/presentation/widgets/custom_text_form_field.dart';
 
@@ -34,7 +34,7 @@ class CustomFormWidget extends StatelessWidget {
                 onChanged: (subTitle) {
                   addTaskCubit.taskSubTitle = subTitle;
                 },
-                lableText: AppStrings.description,
+                lableText: AppStrings.addNewTask,
               ),
               const SizedBox(height: 20),
               // Widget to get a button for actions in the add task view
