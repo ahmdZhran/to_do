@@ -11,10 +11,11 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const HomeView());
       case '/addTaskView':
         return MaterialPageRoute(
-            builder: (_) => BlocProvider(
-                  create: (context) => AddTaskCubit(),
-                  child: const AddTaskView(),
-                ));
+          builder: (_) => BlocProvider(
+            create: (context) => AddTaskCubit(),
+            child: const AddTaskView(),
+          ),
+        );
       default:
         return MaterialPageRoute(builder: (_) => const HomeView());
     }
