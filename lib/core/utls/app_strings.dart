@@ -10,5 +10,7 @@ abstract class AppStrings {
       time = 'Time',
       date = 'Date',
       addTask = 'Add Task',
-      deleteTask = 'Delete Task';
+      deleteTask = 'Delete Task',
+      //nave of hive box
+      notesBoxName = 'noteBox';
 }
