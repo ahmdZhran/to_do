@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:to_do/features/add_task/presentation/widgets/back_to_home_view.dart';
 import 'package:to_do/features/add_task/presentation/widgets/custom_form_widget.dart';
-import 'package:to_do/features/add_task/presentation/widgets/get_buttons.dart';
 import 'package:to_do/features/add_task/presentation/widgets/head_add_task_text.dart';
 import 'package:to_do/features/add_task/presentation/widgets/sub_text.dart';
 
@@ -26,9 +25,6 @@ class AddTaskView extends StatelessWidget {
             SubTextHead(),
             // Widget for the custom form to input task details
             CustomFormWidget(),
-            SizedBox(height: 20),
-            // Widget to get buttons for actions in the add task view
-            GetButtons()
           ],
         ),
       ),

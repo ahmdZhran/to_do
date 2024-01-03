@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:to_do/features/add_task/presentation/widgets/custom_text_form_field.dart';
+import 'package:to_do/features/add_task/presentation/widgets/get_buttons.dart';
 
 class CustomFormWidget extends StatelessWidget {
   const CustomFormWidget({super.key});
@@ -16,6 +17,9 @@ class CustomFormWidget extends StatelessWidget {
           CustomTextFomField(
             lableText: 'Description',
           ),
+          SizedBox(height: 20),
+          // Widget to get buttons for actions in the add task view
+          GetButtons(),
         ],
       ),
     );
