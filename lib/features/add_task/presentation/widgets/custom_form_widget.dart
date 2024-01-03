@@ -25,7 +25,8 @@ class CustomFormWidget extends StatelessWidget {
                 onChanged: (title) {
                   addTaskCubit.taskTitle = title;
                 },
-                lableText: 'add your task', // Corrected typo in label text
+                lableText:
+                    AppStrings.addYourTask, // Corrected typo in label text
               ),
               const SizedBox(height: 30),
               // CustomTextFormField for task description
@@ -33,7 +34,7 @@ class CustomFormWidget extends StatelessWidget {
                 onChanged: (subTitle) {
                   addTaskCubit.taskSubTitle = subTitle;
                 },
-                lableText: 'Description',
+                lableText: AppStrings.description,
               ),
               const SizedBox(height: 20),
               // Widget to get a button for actions in the add task view
