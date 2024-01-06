@@ -23,8 +23,7 @@ class _CustomListCardItemState extends State<CustomListCardItem> {
         height: 720,
         child: BlocBuilder<TaskCubit, TaskState>(
           builder: (context, state) {
-            List<TaskModel> tasks =
-                BlocProvider.of<TaskCubit>(context).tasks ?? [];
+            List<TaskModel> tasks = BlocProvider.of<TaskCubit>(context).tasks!;
             return ListView.builder(
               itemCount: tasks.length,
               itemBuilder: (context, index) {
