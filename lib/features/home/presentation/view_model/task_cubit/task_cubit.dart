@@ -9,8 +9,8 @@ part 'task_state.dart';
 class TaskCubit extends Cubit<TaskState> {
   TaskCubit() : super(TaskInitial());
   List<TaskModel>? tasks;
-  fetchAllTasks() {
-    var taskesBox = Hive.box<TaskModel>(AppStrings.taskesBoxName);
+  fetchAllTasks() async {
+    var taskesBox = await Hive.openBox<TaskModel>(AppStrings.taskesBoxName);
     tasks = taskesBox.values.toList();
   }
 }
